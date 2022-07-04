@@ -1,0 +1,27 @@
+.wrap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f5f5f5;
+    margin-bottom: 5px;
+}
+
+.snikkers__name{
+   font-size: 25px; 
+}
+
+.snikkers__price{
+color:red;
+}
+
+.snikkers__img{
+width: 100px;
+height: 100px;
+}
+
+.snikkers__button{
+background-color: inherit;
+color:#D6545E;
+border:1px solid #D6545E;
+border-radius: 20px;
+}
