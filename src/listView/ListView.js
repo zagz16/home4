@@ -2,13 +2,15 @@ import React from 'react';
 import ShopItem from './ShopItem';
 
 function ListView(props){
-    
-console.log(props);
-    const [arr]=props.arr
-    return(
+         const {arr}=props
+     return(
         <>
-        <ShopItem list={arr}/>
-        </>
+{
+    arr.map((item,index)=>(
+              <ShopItem item={item} key={index} />
+    ))
+}
+              </>
     )
 }
 

@@ -2,12 +2,16 @@ import React from 'react';
 import ShopCard from './ShopCard';
 
 function CardsView(props){
-const [arr]=props
+const {arr}=props
 
     return(
-        <>
-        <ShopCard value={arr}/>
-        </>
+        <div className='wrap-cards'>
+        {
+         arr.map((item,index)=>(
+              <ShopCard item={item} key={index} />
+    ))
+        }
+        </div>
     )
 }
 

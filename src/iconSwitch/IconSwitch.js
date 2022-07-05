@@ -1,15 +1,17 @@
 import React from 'react';
 
 function IconSwitch (props) {
+
+    console.log(props);
+    const {icon}=props
+   
     return ( 
         <>
-        <span className="material-icons">
-view_list
-</span>
+        <button className="material-icons">
+{icon}
+</button>
 
-<span className="material-icons">
-view_module
-</span>
+
 
         </>
      );

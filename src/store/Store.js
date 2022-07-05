@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ListView from '../listView/ListView';
-/* import CardsView from './CardsView'; */
+import CardsView from '../cardsView/CardsView'; 
 import IconSwitch from '../iconSwitch/IconSwitch';
 import './store.css'
 
@@ -37,20 +37,24 @@ const Store = () => {
         img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/layouts/img/5.jpg"
       }];
 
-/* const [cards,setCards]=useState(products) */
+const [cards,setCards]=useState(products)
 const [item,setItem]=useState(products)
-const [listCard,setListCard]=useState(false)
+const [icon,setIcon]=useState('view_module')
 
 
 
- const handleClick=()=>{
-setListCard(prev=>!prev)
-} 
+
+/* const handleClick=()=>(
+
+ setIcon("view__list")
+)
+ */
+
 
     return ( 
         <>
-<IconSwitch onClick={handleClick}/>
-        {/* <CardsView arr={cards}/> */}
+<IconSwitch icon={icon} /* onClick={handleClick} *//>
+         <CardsView arr={cards}/> 
         <ListView arr={item}/>
 
 
