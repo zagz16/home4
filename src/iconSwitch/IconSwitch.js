@@ -1,19 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-function IconSwitch (props) {
+const IconSwitch = ({ icon, onClick }) => (
+  <button onClick={onClick} className='material-icons '>
+    {icon}
+  </button>
+)
 
-    console.log(props);
-    const {icon,onClick}=props
-   
-    return ( 
-        <>
-        <button onClick={onClick} className="material-icons">
-{icon}
-</button>
-
-
-
-        </>
-     );
-}
-export default IconSwitch;
+export default IconSwitch

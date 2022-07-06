@@ -1,17 +1,15 @@
-import React from 'react';
-import ShopItem from './ShopItem';
+import React from 'react'
+import ShopItem from './ShopItem'
+import { nanoid } from 'nanoid'
 
-function ListView(props){
-         const {arr}=props
-     return(
-        <>
-{
-    arr.map((item,index)=>(
-              <ShopItem item={item} key={index} />
-    ))
-}
-              </>
-    )
+function ListView({ arr }) {
+  return (
+    <>
+      {arr.map((item) => (
+        <ShopItem item={item} key={nanoid()} />
+      ))}
+    </>
+  )
 }
 
 export default ListView
