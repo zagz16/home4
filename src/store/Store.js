@@ -41,24 +41,17 @@ const [cards,setCards]=useState(products)
 const [item,setItem]=useState(products)
 const [icon,setIcon]=useState('view_module')
 
-
-
-
-/* const handleClick=()=>(
-
- setIcon("view__list")
-)
- */
+ const handleClick=()=>setIcon(prev=>prev==='view_module'?'view_list':'view_module')
+ 
 
 
     return ( 
         <>
-<IconSwitch icon={icon} /* onClick={handleClick} *//>
-         <CardsView arr={cards}/> 
-        <ListView arr={item}/>
+<IconSwitch icon={icon} onClick={handleClick} />
+      {icon==='view_module' ?  <CardsView arr={cards}/> :<ListView arr={item}/>}
+        </>
 
 
-</>
      );
 }
  

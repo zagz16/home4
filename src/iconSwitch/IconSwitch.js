@@ -3,11 +3,11 @@ import React from 'react';
 function IconSwitch (props) {
 
     console.log(props);
-    const {icon}=props
+    const {icon,onClick}=props
    
     return ( 
         <>
-        <button className="material-icons">
+        <button onClick={onClick} className="material-icons">
 {icon}
 </button>
 
